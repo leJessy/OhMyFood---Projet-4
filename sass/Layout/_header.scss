@@ -1,0 +1,17 @@
+@use "../Utils/variables.scss" as c;
+@use "../Utils/mixins.scss" as m;
+
+header {
+    @include m.boxshadow;
+    position: relative;
+    & img {
+        padding-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+        padding-bottom: 20px;
+
+    }
+}
+

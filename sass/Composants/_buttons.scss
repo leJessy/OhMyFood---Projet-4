@@ -1,0 +1,7 @@
+@use "../Utils/mixins.scss" as m;
+
+button {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    @include m.button;
+}

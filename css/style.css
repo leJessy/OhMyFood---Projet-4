@@ -4,4 +4,57 @@
   margin: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+header img {
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  padding-bottom: 20px;
+}
+
+nav {
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+nav i {
+  margin-right: 2rem;
+}
+
+.browse {
+  text-align: center;
+  background-color: #F7F7F7;
+}
+.browse h1 {
+  padding: 1rem 10% 1rem 10%;
+}
+.browse p {
+  padding: 1rem 10% 1rem 10%;
+  font-size: 18px;
+}
+
+button {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border: 0px;
+  color: white;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=style.css.map */

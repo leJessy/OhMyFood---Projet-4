@@ -1,3 +1,7 @@
-@use "./Base/fonts.scss";
 @use "./Utils/variables.scss";
+@use "./Utils/mixins.scss";
 @use "./Base/reset.scss";
+@use "./Base/fonts.scss";
+@use "./Layout/header.scss";
+@use "./Layout/title.scss";
+@use "./Composants/buttons.scss";
