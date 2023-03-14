@@ -33,19 +33,19 @@ nav i {
   margin-right: 2rem;
 }
 
-.browse {
+.explorer {
   text-align: center;
   background-color: #F7F7F7;
 }
-.browse h1 {
+.explorer h1 {
   padding: 1rem 10% 1rem 10%;
 }
-.browse p {
+.explorer p {
   padding: 1rem 10% 1rem 10%;
   font-size: 18px;
 }
 
-button {
+.btn-explorer {
   margin-top: 1rem;
   margin-bottom: 3rem;
   padding: 1.5rem;
@@ -55,6 +55,32 @@ button {
   border: 0px;
   color: white;
   font-size: 18px;
+}
+
+.btn-filters {
+  display: flex;
+  padding: 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  font-size: 18px;
+  font-family: "roboto";
+}
+.btn-filters i {
+  color: #353535;
+  margin: 0 5rem 0 4rem;
+}
+
+section h1 {
+  margin-left: 5%;
+  margin-bottom: 2rem;
+}
+section .filters-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  margin: 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

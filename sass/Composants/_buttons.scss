@@ -1,7 +1,23 @@
+@use "../Utils/variables.scss" as c;
 @use "../Utils/mixins.scss" as m;
 
-button {
+.btn-explorer {
     margin-top: 1rem;
     margin-bottom: 3rem;
     @include m.button;
+}
+
+.btn-filters {
+    display: flex;
+    padding: 2rem;
+    border: none;
+    border-radius: 2rem;
+    @include m.boxshadow;
+    background-color: white;
+    font-size: 18px;
+    font-family: 'roboto';
+    & i {
+        color: c.$colour-darkgrey;
+        margin: 0 5rem 0 4rem;
+    }
 }

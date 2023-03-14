@@ -1,0 +1,12 @@
+section {
+    h1 {
+        margin-left: 5%;
+        margin-bottom: 2rem;
+    }
+    .filters-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        margin: 0 2rem;
+    }
+}
