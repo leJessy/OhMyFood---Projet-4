@@ -5,6 +5,11 @@
     margin-top: 1rem;
     margin-bottom: 3rem;
     @include m.button;
+    @include m.boxshadow;
+    cursor: pointer;
+    &:hover {
+        @include m.boxshadowdark;
+    }
 }
 
 .btn-filters {
@@ -16,8 +21,20 @@
     background-color: white;
     font-size: 18px;
     font-family: 'roboto';
+    cursor: pointer;
     & i {
         color: c.$colour-darkgrey;
-        margin: 0 5rem 0 4rem;
+        margin-right: 2rem;
+        position: absolute;
+    }
+    &:hover {
+        background-color: #F5EDFF;
+        @include m.boxshadowdark;
+    }
+    &:hover i {
+        color: c.$colour-purple;
+    }
+    p {
+        margin-left: 1rem;
     }
 }

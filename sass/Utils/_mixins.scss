@@ -11,3 +11,16 @@
         color: white;
         font-size: 18px;
 }
+
+@mixin boxshadowdark {
+    box-shadow: rgba( 0, 0, 0, 0.35) 0px 6px 8px;
+}
+
+@mixin roundednumbers {
+    border-radius: 50%;
+    background: #9356DC;
+    color: white;
+    width: 1.5rem;
+    position: relative;
+    left: -3.8rem;
+}

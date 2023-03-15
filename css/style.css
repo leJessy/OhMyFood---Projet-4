@@ -17,7 +17,7 @@ header img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 100px;
+  height: 90px;
   padding-bottom: 20px;
 }
 
@@ -55,6 +55,11 @@ nav i {
   border: 0px;
   color: white;
   font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.btn-explorer:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 8px;
 }
 
 .btn-filters {
@@ -66,13 +71,26 @@ nav i {
   background-color: white;
   font-size: 18px;
   font-family: "roboto";
+  cursor: pointer;
 }
 .btn-filters i {
   color: #353535;
-  margin: 0 5rem 0 4rem;
+  margin-right: 2rem;
+  position: absolute;
+}
+.btn-filters:hover {
+  background-color: #F5EDFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 8px;
+}
+.btn-filters:hover i {
+  color: #9356DC;
+}
+.btn-filters p {
+  margin-left: 1rem;
 }
 
 section h1 {
+  margin-top: 1rem;
   margin-left: 5%;
   margin-bottom: 2rem;
 }
@@ -81,6 +99,20 @@ section .filters-list {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
   margin: 0 2rem;
+}
+@media screen and (min-width: 1050px) {
+  section .filters-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.roundednumbers {
+  border-radius: 50%;
+  background: #9356DC;
+  color: white;
+  width: 1.5rem;
+  position: relative;
+  left: -3.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
