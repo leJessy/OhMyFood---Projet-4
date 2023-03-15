@@ -3,6 +3,7 @@
 
 .restaurants-list {
     background-color: c.$colour-backgroundgrey;
+    padding-bottom: 4rem;
     h1 {
         margin-top: 3rem;
         margin-left: 5%;
@@ -29,8 +30,23 @@
     a {
         text-decoration: none;
         color: inherit;
-        width: 90%;
+        width: 95%;
         margin: auto;
+    }
+    .nouveau {
+        position: relative;
+    }
+    .nouveau::before{
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color: c.$colour-mint;
+        color: c.$colour-darkgreen;
+        display: grid;
+        place-items: center;
+        top: 1rem;
+        right: 1.5rem;
     }
 }
 
@@ -38,7 +54,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 90%;
+    width: 95%;
     height: 300px;
     border-radius: 25px;
     margin: auto;
@@ -49,6 +65,25 @@
     .restaurants-text {
         padding-top: 1rem;
         padding-left: 1rem;
+        position: relative;
+        i {
+            position: absolute;
+            right: 0.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            width: 32px;
+        }
+        .fa-solid {
+            color: transparent;
+            @include m.gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+        }
+        &:hover .fa-solid {
+            opacity: 1;
+        }
     }
     .restaurants-img {
         height: 220px;

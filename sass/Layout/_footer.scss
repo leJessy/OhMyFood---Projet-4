@@ -6,17 +6,23 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
     background-color: c.$colour-darkgrey;
-    margin-top: 2rem;
     padding-top: 2rem;
     color: white;
     padding-left: 2rem;
     padding-bottom: 2rem;
+    @media (min-width: 900px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        justify-content: center;
+        padding-left: 0;
+        .Shrikhand {
+            order: 5;
+        }
+    }
     a {
         color: inherit;
         text-decoration: none;
-    }
-    .Shrikhand {
-        margin-bottom: 1rem;
     }
 }
 

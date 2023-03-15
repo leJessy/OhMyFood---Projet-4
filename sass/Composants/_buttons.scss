@@ -15,11 +15,12 @@
 .btn-filters {
     display: flex;
     padding: 2rem;
+    align-items: center;
     border: none;
     border-radius: 2rem;
     @include m.boxshadow;
     background-color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'roboto';
     cursor: pointer;
     & i {
