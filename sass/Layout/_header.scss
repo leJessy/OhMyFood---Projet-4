@@ -4,14 +4,5 @@
 header {
     @include m.boxshadow;
     position: relative;
-    & img {
-        padding-top: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 90px;
-        padding-bottom: 20px;
-
-    }
 }
 
