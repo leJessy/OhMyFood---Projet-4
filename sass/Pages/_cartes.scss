@@ -1,0 +1,115 @@
+@use "../Utils/variables.scss" as c;
+@use "../Utils/mixins.scss" as m;
+
+header {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    i {
+        font-size: 30px;
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+    }
+}
+
+.resto-img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.menu-section {
+    text-align: center;
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+    background-color: c.$colour-backgroundgrey;
+    position: sticky;
+    margin-top: -50px;
+    top: 400px;
+    @media (min-width: 750px) {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        h3 {
+            margin-left: 18%;
+        }
+        h2 {
+            margin-left: 18%;
+        }
+        i {
+            margin-right: 18%;
+        }
+    }
+    h4 {
+        text-align: left;
+    }
+    .menu-title {
+        display: flex;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        i {
+            position: absolute;
+            font-size: 2rem;
+            width: 32px;
+            right: 20px;
+        }
+        .fa-solid {
+            @include m.heart;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    h3 {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        margin-right: auto;
+        position: relative;
+        &::after {
+            content: "";
+            height: 0.25rem;
+            width: 2.5rem;
+            background-color: c.$colour-mint;
+            position: absolute;
+            top: 3.5rem;
+            left: 2rem;
+        }
+    }
+    .menu-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.menu-list {
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @include m.boxshadow;
+    &:hover {
+        background-color: c.$colour-mint;
+        cursor: pointer;
+    }
+    @media (min-width: 750px) {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .prix {
+        display: flex;
+        justify-content: space-between;
+        .txt {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
