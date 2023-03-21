@@ -389,14 +389,14 @@ header i {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu-cards .menu-list span {
+.menu-cards .menu-list .price {
   margin-left: auto;
   padding: 1.5rem 1rem 1.5rem 0;
 }
 .menu-cards .menu-list .check {
   display: grid;
   place-items: center;
-  color: white;
+  color: #008766;
   background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   width: 3rem;

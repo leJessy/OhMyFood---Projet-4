@@ -18,7 +18,6 @@ header {
     height: 400px;
     width: 100%;
     object-fit: cover;
-
 }
 
 .menu-section {
@@ -123,14 +122,14 @@ header {
                 white-space: nowrap;
             }
         }
-        & span {
+        .price {
             margin-left: auto;
             padding: 1.5rem 1rem 1.5rem 0;        
         }
         & .check {
             display: grid;
             place-items: center;
-            color: white;
+            color: c.$colour-darkgreen;
             background-color: c.$colour-mint;
             border-radius: 0 1rem 1rem 0;
             width: 3rem;
@@ -151,40 +150,30 @@ header {
 .menu-list {
     animation: appear 2s ease-in-out;
 }
-
 .delay-1 {
     animation-delay: 100ms;
 }
-
 .delay-2 {
     animation-delay: 200ms;
 }
-
 .delay-3 {
     animation-delay: 300ms;
 }
-
-
 .delay-4 {
     animation-delay: 400ms;
 }
-
 .delay-5 {
     animation-delay: 500ms;
 }
-
 .delay-6 {
     animation-delay: 600ms;
 }
-
 .delay-7 {
     animation-delay: 700ms;
 }
-
 .delay-8 {
     animation-delay: 800ms;
 }
-
 .delay-9 {
     animation-delay: 900ms;
 }
