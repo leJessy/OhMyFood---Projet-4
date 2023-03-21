@@ -41,14 +41,14 @@ nav i {
   margin-right: 2rem;
 }
 
-.explorer {
+.discover {
   text-align: center;
   background-color: #F7F7F7;
 }
-.explorer h1 {
+.discover h1 {
   padding: 3rem 10% 1rem 10%;
 }
-.explorer p {
+.discover p {
   padding: 1rem 10% 1rem 10%;
   font-size: 18px;
 }
@@ -56,6 +56,8 @@ nav i {
 .btn-explorer {
   margin-top: 2rem;
   margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1.5rem;
   border-radius: 2rem;
   background: rgb(147, 86, 220);
@@ -69,6 +71,7 @@ nav i {
 }
 .btn-explorer:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 8px;
+  opacity: 0.9;
 }
 
 .btn-filters {
@@ -266,7 +269,7 @@ header i {
   font-size: 30px;
   position: absolute;
   left: 1rem;
-  top: 1.5rem;
+  top: calc(50% - 15px);
 }
 
 .resto-img {
@@ -276,13 +279,17 @@ header i {
 }
 
 .menu-section {
-  text-align: center;
   width: 100%;
   border-radius: 3rem 3rem 0 0;
+  padding-bottom: 3rem;
   background-color: #F7F7F7;
   position: sticky;
   margin-top: -50px;
   top: 400px;
+}
+.menu-section h2 {
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 750px) {
   .menu-section {
@@ -291,7 +298,7 @@ header i {
     margin-right: 10%;
   }
   .menu-section h3 {
-    margin-left: 18%;
+    margin-left: 10%;
   }
   .menu-section h2 {
     margin-left: 18%;
@@ -340,40 +347,157 @@ header i {
   top: 3.5rem;
   left: 2rem;
 }
-.menu-section .menu-cards {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+.menu-section button {
+  margin-top: 4rem;
+  text-align: center;
+  display: block;
 }
 
-.menu-list {
+.menu-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.menu-cards h3::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+}
+.menu-cards .menu-list {
+  height: 4.5rem;
+  width: 80%;
   background-color: white;
-  border-radius: 1rem;
-  margin-top: 1rem;
-  padding: 1rem;
-  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.menu-list:hover {
-  background-color: #99E2D0;
-  cursor: pointer;
-}
-@media (min-width: 750px) {
-  .menu-list {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.menu-list .prix {
+  border-radius: 1rem;
   display: flex;
-  justify-content: space-between;
+  overflow: hidden;
 }
-.menu-list .prix .txt {
-  white-space: nowrap;
+.menu-cards .menu-list__content {
+  padding: 1rem;
+  overflow: hidden;
+}
+.menu-cards .menu-list__content h4 {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-cards .menu-list__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-cards .menu-list span {
+  margin-left: auto;
+  padding: 1.5rem 1rem 1.5rem 0;
+}
+.menu-cards .menu-list .check {
+  display: grid;
+  place-items: center;
+  color: white;
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  width: 3rem;
+  margin-right: -3rem;
+  transition: 400ms ease-in-out;
+}
+.menu-cards .menu-list:hover {
+  cursor: pointer;
+}
+.menu-cards .menu-list:hover .check {
+  margin-right: 0;
+}
+
+/* Animation menu */
+.menu-list {
+  animation: appear 2s ease-in-out;
+}
+
+.delay-1 {
+  animation-delay: 100ms;
+}
+
+.delay-2 {
+  animation-delay: 200ms;
+}
+
+.delay-3 {
+  animation-delay: 300ms;
+}
+
+.delay-4 {
+  animation-delay: 400ms;
+}
+
+.delay-5 {
+  animation-delay: 500ms;
+}
+
+.delay-6 {
+  animation-delay: 600ms;
+}
+
+.delay-7 {
+  animation-delay: 700ms;
+}
+
+.delay-8 {
+  animation-delay: 800ms;
+}
+
+.delay-9 {
+  animation-delay: 900ms;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: white;
+  opacity: 0.8;
+  height: 100vh;
+  animation: dissapear 50ms 3s forwards;
+}
+
+@keyframes dissapear {
+  to {
+    transform: scale(0);
+  }
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  border: 20px solid #9356DC;
+  position: fixed;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  right: calc(50% - 50px);
+  bottom: calc(50% - 50px);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
