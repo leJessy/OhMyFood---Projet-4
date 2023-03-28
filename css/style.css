@@ -393,7 +393,7 @@ header i {
   margin-left: auto;
   padding: 1.5rem 1rem 1.5rem 0;
 }
-.menu-cards .menu-list .check {
+.menu-cards .menu-list .checkmark {
   display: grid;
   place-items: center;
   color: #008766;
@@ -403,10 +403,17 @@ header i {
   margin-right: -3rem;
   transition: 400ms ease-in-out;
 }
+.menu-cards .menu-list .checkmark i {
+  color: #99E2D0;
+  background: white;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 0.2rem 1rem 0.2rem 0.2rem;
+}
 .menu-cards .menu-list:hover {
   cursor: pointer;
 }
-.menu-cards .menu-list:hover .check {
+.menu-cards .menu-list:hover .checkmark {
   margin-right: 0;
 }
 
